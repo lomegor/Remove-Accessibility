@@ -1,8 +1,8 @@
 /**
  Copyright 2012 Sebastian Ventura
- This file is part of Remove Accesibility.
+ This file is part of Remove Accessibility.
 
- Remove Accesibility is free software: you can redistribute it and/or modify
+ Remove Accessibility is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
@@ -13,7 +13,7 @@
  GNU General Public License for more details.
 
  You should have received a copy of the GNU General Public License
- along with Remove Accesibility.  If not, see <http://www.gnu.org/licenses/>.
+ along with Remove Accessibility.  If not, see <http://www.gnu.org/licenses/>.
 **/
 
 const Panel = imports.ui.main.panel;
