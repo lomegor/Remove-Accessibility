@@ -16,14 +16,14 @@
  along with Remove Accessibility.  If not, see <http://www.gnu.org/licenses/>.
 **/
 
-const Panel = imports.ui.main.panel;
+const Main = imports.ui.main;
 
 function init() {}
 
 function enable() {
-  Panel._statusArea.a11y.actor.hide();
+    Main.panel._statusArea.a11y.actor.hide();
 }
 
 function disable() {
-  Panel._statusArea.a11y.actor.show();
+    Main.panel._statusArea.a11y.actor.show();
 }
