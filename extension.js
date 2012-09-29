@@ -1,5 +1,6 @@
 /**
  Copyright 2012 Sebastian Ventura
+ Copyright 2012 Meng Zhuo
  This file is part of Remove Accessibility.
 
  Remove Accessibility is free software: you can redistribute it and/or modify
@@ -21,9 +22,9 @@ const Main = imports.ui.main;
 function init() {}
 
 function enable() {
-    Main.panel._statusArea.a11y.actor.hide();
+    Main.panel.statusArea.a11y.actor.hide();
 }
 
 function disable() {
-    Main.panel._statusArea.a11y.actor.show();
+    Main.panel.statusArea.a11y.actor.show();
 }
