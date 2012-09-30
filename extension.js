@@ -22,9 +22,19 @@ const Main = imports.ui.main;
 function init() {}
 
 function enable() {
-    Main.panel.statusArea.a11y.actor.hide();
+    if (typeof(Main.panel._statusArea) == 'undefined'){
+        Main.panel.statusArea.a11y.actor.hide();
+    }
+    else{
+        Main.panel._statusArea.a11y.actor.hide();
+    }
 }
 
 function disable() {
-    Main.panel.statusArea.a11y.actor.show();
+    if (typeof(Main.panel._statusArea) == 'undefined'){
+        Main.panel.statusArea.a11y.actor.show();
+    }
+    else{
+        Main.panel._statusArea.a11y.actor.show();
+    }
 }
