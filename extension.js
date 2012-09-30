@@ -22,19 +22,17 @@ const Main = imports.ui.main;
 function init() {}
 
 function enable() {
-    if (typeof(Main.panel._statusArea) == 'undefined'){
+    if (typeof Main.panel._statusArea === 'undefined') {
         Main.panel.statusArea.a11y.actor.hide();
-    }
-    else{
+    } else {
         Main.panel._statusArea.a11y.actor.hide();
     }
 }
 
 function disable() {
-    if (typeof(Main.panel._statusArea) == 'undefined'){
+    if (typeof Main.panel._statusArea === 'undefined') {
         Main.panel.statusArea.a11y.actor.show();
-    }
-    else{
+    } else {
         Main.panel._statusArea.a11y.actor.show();
     }
 }
