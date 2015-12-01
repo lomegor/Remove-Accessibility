@@ -35,13 +35,30 @@ const A11yStatusIconHelper = new Lang.Class({
 
         // The ClutterActor representing the icon in the panel.
         this._iconActor = a11yElement.actor;
+
+        // Id for the handler used to connect to GSetting's signals.
+        this._handlerId = 0;
+    },
+
+    _onIconVisibilityChanged: function(actor) {
+        if (actor.is_visible()) {
+            actor.hide();
+        }
     },
 
     hideA11yElement: function() {
+        // Monitor changes to the icon's visibilty, so that we
+        // ensure the icon always keeps hidden, no-matter-what.
+        this._handlerId = this._iconActor.connect('notify::visible',
+                                                  Lang.bind(this, this._onIconVisibilityChanged));
         this._iconActor.hide();
     },
 
     restoreA11yElement: function() {
+        if (this._handlerId) {
+            this._iconActor.disconnect(this._handlerId);
+            this._handlerId = 0;
+        }
         this._iconActor.show();
     }
 });
