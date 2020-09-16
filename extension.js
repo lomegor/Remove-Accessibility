@@ -34,7 +34,7 @@ const A11yStatusIconHelper = new Lang.Class({
         }
 
         // The ClutterActor representing the icon in the panel.
-        this._iconActor = a11yElement.actor;
+        this._iconActor = a11yElement;
 
         // Id for the handler used to connect to GSetting's signals.
         this._handlerId = 0;
